@@ -1,0 +1,15 @@
+#!/bin/bash
+
+m_Entrada=$(zenity --entry --title="Base64")
+if [[ $? == 0 ]]; then
+
+  zenity --question --title=Base64 --text="O que deseja fazer?" --ok-label=Encode --cancel-label=Decode
+
+  case $? in
+
+  0) m_Encode=$(echo $m_Entrada | base64); zenity --info --title=Base64 --text="$m_Encode" ;;
+  1) m_Decode=$(echo $m_Entrada | base64 -d ) ; zenity --info --title=Base64 --text="$m_Decode" ;;
+  *) zenity --error --text="Opção Inválida" ;;
+
+  esac
+fi
