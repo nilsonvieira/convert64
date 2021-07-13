@@ -1,0 +1,11 @@
+#!/bin/bash
+
+apt-get install zenity xclip -y  > /dev/null 
+mkdir /usr/share/icons/convert64/ > /dev/null 2>&1
+cp -rp ./convert64.svg /usr/share/icons/convert64/
+chmod +x /usr/share/icons/convert64/
+chmod +x /usr/share/icons/convert64/*
+cp -rp ./convert64.desktop /usr/share/applications/convert64.desktop
+chmod +x /usr/share/applications/convert64.desktop
+cp -rp ./convert64 /usr/local/bin/
+chmod 777  /usr/local/bin/convert64
