@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Convert64
+Comment=Nilson Vieira
+Exec=/usr/local/bin/convert64
+Icon=/usr/share/icons/convert64/convert64.svg
+Terminal=false
+Type=Application
+Categories=Utilities;
