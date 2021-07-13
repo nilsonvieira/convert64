@@ -7,8 +7,8 @@ if [[ $? == 0 ]]; then
 
   case $? in
 
-  0) m_Encode=$(echo $m_Entrada | base64); zenity --info --title=Base64 --text="$m_Encode" ;;
-  1) m_Decode=$(echo $m_Entrada | base64 -d ) ; zenity --info --title=Base64 --text="$m_Decode" ;;
+  0) m_Encode=$(echo $m_Entrada | base64); zenity --info --title=Base64 --ok-label=Copiar --text="$m_Encode" ; echo $m_Encode | xclip -i -selection clipboard ;;
+  1) m_Decode=$(echo $m_Entrada | base64 -d ) ; zenity --info --title=Base64 --ok-label=Copiar --text="$m_Decode" ; echo $m_Decode | xclip -i -selection clipboard ;;
   *) zenity --error --text="Opção Inválida" ;;
 
   esac
